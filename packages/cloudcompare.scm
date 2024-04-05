@@ -28,17 +28,17 @@
 (define-public cloudcompare
   (package
     (name "cloudcompare")
-    (version "2.12.4")
+    (version "2.13.1")
     (source
      (origin
        (method git-fetch)
        (uri (git-reference
              (url "https://github.com/CloudCompare/CloudCompare")
-             (commit "v2.12.4")
+             (commit "v2.13.1")
              (recursive? #t)))
        (file-name (git-file-name name version))
        (sha256
-        (base32 "0js0pzdhcqi56iyll76iv476rqvrabrih55y0j31bjfz5yypy3xd"))))
+        (base32 "0ff2pcmqk87g1pkiaglqx771lhasmzhvnjx035ki4pzdmnvi0321"))))
     (inputs (list qtbase-5
                   qtsvg-5
                   qtlocation
