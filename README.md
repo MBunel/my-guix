@@ -11,3 +11,24 @@ Use this repo as a [channel](https://guix.gnu.org/manual/en/html_node/Channels.h
 		(branch "main")))
         %default-channels)
 ```
+
+## Packages
+
+### MicMac
+
+### CloudCompare
+
+### Geoflow
+
+### Laslib
+
+### Laszip
+
+### Pdal
+
+### Entwine
+
+### Untwine
+
+### Pdal-wrench
+
