@@ -1,18 +1,26 @@
 (define-module (packages tyler)
   #:use-module (guix)
+  ;#:use-module (guix utils)
   #:use-module (guix build-system cargo)
   #:use-module (guix git-download)
   #:use-module ((guix licenses)
                 #:prefix license:)
   #:use-module (gnu packages)
+  ;; Guix packages
   #:use-module (gnu packages cpp)
   #:use-module (gnu packages geo)
   #:use-module (gnu packages curl)
   #:use-module (gnu packages llvm)
   #:use-module (gnu packages pkg-config)
   #:use-module (gnu packages crates-io)
-  #:use-module (gnu packages gl))
-
+  #:use-module (gnu packages gl)
+  #:use-module (gnu packages sqlite)
+  #:use-module (gnu packages cmake)
+  #:use-module (gnu packages llvm)
+  ;; My-packages
+  #:use-module (packages geoflow)
+  #:use-module (packages geo)
+  #:use-module (packages crates-io))
 
 ;; Denine tyler package
 (define-public tyler
@@ -27,22 +35,33 @@
              (commit "v0.3.10")
              (recursive? #f)))
        (file-name (git-file-name name version))
+       (patches '("packages/patches/tyler-config.patch"))
        (sha256
         (base32 "0x69ah00fk94bgrc0va9x35dzbyr9kdlqfxwfwd1f42n9qj19506"))))
     ;;(inputs (list proj-sys-0.23))
-    (native-inputs (list pkg-config))
+    (inputs (list geoflow sqlite proj-9.4 clang))
+    (native-inputs (list pkg-config cmake))
     (build-system cargo-build-system)
     (arguments
-     `(#:cargo-inputs
-       (("proj-sys" ,proj-sys-0.23))
-
-       #:cargo-test-flags
-       (list "--release" "--"
-             "--skip=test_apparent_size")
-       #:install-source? #f))
-    (home-page "https://github.com/geoflow3d/geoflow-bundle")
-    (synopsis
-     "A tool for reconstructing 3D building models from point clouds, fully automated, with high-detail. Free and open-source.")
+     `(#:cargo-inputs (("rust-bitvec" ,rust-bitvec-1)
+                       ("rust-bincode" ,rust-bincode-1)
+                       ("rust-clap" ,rust-clap-4)
+                       ("rust-env-logger" ,rust-env-logger-0.10)
+                       ("rust-libc" ,rust-libc-0.2)
+                       ("rust-log" ,rust-log-0.4)
+                       ("rust-morton-encoding" ,rust-morton-encoding-2)
+                       ("rust-num-traits" ,rust-num-traits-0.2)
+                       ("rust-proj-sys" ,rust-proj-sys-0.23)
+                       ("rust-rayon" ,rust-rayon-1)
+                       ("rust-serde" ,rust-serde-1)
+                       ("rust-serde-json" ,rust-serde-json-1)
+                       ("rust-serde-repr" ,rust-serde-repr-0.1)
+                       ("rust-subprocess" ,rust-subprocess-0.2)
+                       ("rust-thiserror" ,rust-thiserror-1)
+                       ("rust-walkdir" ,rust-walkdir-2))
+        #:tests? #f))
+    (home-page "https://github.com/3DGI/tyler")
+    (synopsis "Create tiles from 3D city objects encoded as CityJSONFeatures.")
     (description
-     "A tool for reconstructing 3D building models from point clouds, fully automated, with high-detail. Free and open-source.")
-    (license (list license:gpl3+ license:agpl3+ license:cc0))))
+     "Create tiles from 3D city objects encoded as @code{CityJSONFeatures}.")
+    (license (list license:asl2.0))))
