@@ -249,9 +249,9 @@
     (description "(more or less) accurate floating point algorithms")
     (license (list license:expat license:asl2.0))))
 
-(define-public rust-geographiclib-rs-0.2
+(define-public rust-geographiclib-0.2
   (package
-    (name "rust-geographiclib-rs")
+    (name "rust-geographiclib")
     (version "0.2.4")
     (source
      (origin
@@ -473,7 +473,7 @@
      `(#:cargo-inputs (("rust-earcutr" ,rust-earcutr-0.4)
                        ("rust-float-next-after" ,rust-float-next-after-1)
                        ("rust-geo-types" ,rust-geo-types-0.7)
-                       ("rust-geographiclib-rs" ,rust-geographiclib-rs-0.2)
+                       ("rust-geographiclib" ,rust-geographiclib-0.2)
                        ("rust-log" ,rust-log-0.4)
                        ("rust-num-traits" ,rust-num-traits-0.2)
                        ("rust-proj" ,rust-proj-0.27)

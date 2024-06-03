@@ -16,11 +16,10 @@
        (method git-fetch)
        (uri (git-reference
              (url "https://github.com/MBunel/lg")
-             (commit "a6281f812f9a0a5d1cf9e6cf086e01fedd1409f9")))
+             (commit "v0.2.1")))
        (file-name (git-file-name name version))
        (sha256
-        (base32 "1bj7jkbn01dxah27crn7q5jm5g7bgqs9p02n3dybg37ww09ipkgk"))))
-   ;;(inputs (list rust-clap))
+        (base32 "0gl75q72i3j8gq9hrk24kq8sa70xsyxqdjq0v26c0jx98577gisb"))))
     (build-system cargo-build-system)
     (arguments
      `(#:cargo-inputs (("rust-las" ,rust-las-0.8)
@@ -38,5 +37,5 @@
 		       ("rust-env-logger" ,rust-env-logger-0.11))))
     (home-page "https://github.com/MBunel/lg")
     (synopsis "A las file filter")
-    (description "TODO")
+    (description "lg is a command line tool to filter asprs's las and laz files using thier header")
     (license license:gpl2)))
