@@ -34,7 +34,7 @@
                        ("rust-pkg-config" ,rust-pkg-config-0.3)
                        ("rust-tar" ,rust-tar-0.4))))
     (home-page "https://github.com/georust/proj")
-   (synopsis "Rust bindings for PROJ v9.2.x")
+    (synopsis "Rust bindings for PROJ v9.2.x")
     (description "Rust bindings for PROJ v9.2.x")
     (license (list license:expat license:asl2.0))))
 
@@ -104,8 +104,8 @@
                        ("rust-num-traits" ,rust-num-traits-0.2)
                        ("rust-rayon" ,rust-rayon-1))))
     (home-page "https://github.com/tmontaigu/laz-rs")
-    (synopsis "Rust port of Laszip compression. of the LAS format")
-    (description "Rust port of Laszip compression.  of the LAS format")
+    (synopsis "Rust port of Laszip compression for the LAS format")
+    (description "Rust port of Laszip compression for the LAS format")
     (license license:asl2.0)))
 
 (define-public rust-las-0.8
