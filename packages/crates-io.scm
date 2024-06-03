@@ -532,4 +532,3 @@
     (description
      "This package provides a library to generate and parse UUIDs.")
     (license (list license:asl2.0 license:expat))))
-

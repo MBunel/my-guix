@@ -51,4 +51,3 @@ Use this repo as a [channel](https://guix.gnu.org/manual/en/html_node/Channels.h
   - [earcur](https://crates.io/crates/earcutr) v0.4.3
   - [geo](https://crates.io/crates/geo) v0.28.0
   - [uuid](https://crates.io/crates/uuid) v1.8.0
-  
