@@ -35,11 +35,11 @@
              (commit "v0.3.10")
              (recursive? #f)))
        (file-name (git-file-name name version))
-       (patches '("packages/patches/tyler-config.patch"))
+       (patches (search-patches "packages/patches/tyler-config.patch"))
        (sha256
         (base32 "0x69ah00fk94bgrc0va9x35dzbyr9kdlqfxwfwd1f42n9qj19506"))))
-    ;;(inputs (list proj-sys-0.23))
-    (inputs (list geoflow sqlite proj-9.4 clang))
+    (inputs (list sqlite proj-9.4 clang))
+    (propagated-inputs (list geoflow))
     (native-inputs (list pkg-config cmake))
     (build-system cargo-build-system)
     (arguments
