@@ -1,3 +1,6 @@
+The origin cargo.toml file call a local version of proj-sys crate. With this patch we
+use the guix packaged version of this lib.
+
 diff --git a/Cargo.toml b/Cargo.toml
 index 24f0198..cb079b3 100644
 --- a/Cargo.toml
