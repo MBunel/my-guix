@@ -16,7 +16,7 @@ Use this repo as a [channel](https://guix.gnu.org/manual/en/html_node/Channels.h
 
 - GIS softwares:
   - [MicMac](https://github.com/micmacIGN/micmac.git) v1.1.1
-  - [CloudCompare](https://github.com/CloudCompare/CloudCompare) v2.13.1
+  - [CloudCompare](https://github.com/CloudCompare/CloudCompare) v2.13.1  --> v2.13.2 Added to Guix (pending [pull request](https://issues.guix.gnu.org/73934))
   - [entwine](https://github.com/connormanning/entwine) v3.0.0
   - [geoflow](https://github.com/geoflow3d/geoflow-bundle) v2024.03.08
   - [pdal](https://github.com/PDAL/PDAL) v2.6.1
@@ -26,8 +26,8 @@ Use this repo as a [channel](https://guix.gnu.org/manual/en/html_node/Channels.h
   - [lg](https://github.com/MBunel/lg) v0.2.1
 - Libs:
   - [laslib](https://github.com/LAStools/LAStools) v2.0.2
-  - [laszip](https://github.com/LASzip/LASzip) v3.4.4
-  - [libe57format](https://github.com/asmaloney/libE57Format) v3.1.1
+  - [laszip](https://github.com/LASzip/LASzip) v3.4.4 --> v3.4.3 Added to Guix ([pull request](https://issues.guix.gnu.org/68278))
+  - [libe57format](https://github.com/asmaloney/libE57Format) v3.1.1 --> v3.2 Added to Guix (pending [pull request](https://issues.guix.gnu.org/73934))
   - [proj](https://proj.org/en/9.4/#) v9.4.0
   - [cgal](https://www.cgal.org/) v5.5.4
 - Rust crates:
